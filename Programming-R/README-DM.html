@@ -1,0 +1,506 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Programming - R · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Programming-Python/Pandas.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Programming-Javascript/">
+            
+                <a href="../Programming-Javascript/">
+            
+                    
+                    Programming - Javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Programming-Python/Pandas.html">
+            
+                <a href="../Programming-Python/Pandas.html">
+            
+                    
+                    Programming - Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="README-DM.html">
+            
+                <a href="README-DM.html">
+            
+                    
+                    Programming - R
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Programming - R</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="knowledge-base-for-r-language">Knowledge base for R language</h2>
+<ul>
+<li>Book
+-The art of R Programming (Norman Matloff)</li>
+<li><p>Table of Content</p>
+<ul>
+<li>R<ul>
+<li><a href="#vector">Vector</a></li>
+<li><a href="#Matrix">Matrix</a></li>
+<li><a href="">List</a></li>
+<li><a href="#Dataframe">Dataframe</a></li>
+</ul>
+</li>
+<li><p><a href="#Method">Method</a></p>
+<ul>
+<li><p>Clustering Method</p>
+<ul>
+<li>K-means<ul>
+<li>Inroduction </li>
+<li>R package name / Matlab function</li>
+</ul>
+</li>
+<li><p>Fuzzy Clustering</p>
+</li>
+<li><p>Hierarchical Clustering</p>
+</li>
+<li><p>Clusters index</p>
+</li>
+<li><p>Comparsion with different clustering Method : Table</p>
+</li>
+<li><p>Principal Component Analysis</p>
+<ul>
+<li>Mixed type of Pricipal Comonpoent Analysis</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Classifiers </p>
+<ul>
+<li>CART / Decsion Tree</li>
+<li>LDA</li>
+<li>SVM</li>
+<li>Neural Network</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is <a href="http://example.com/" title="Optional Title Here" target="_blank">an example</a> reference-style link.</p>
+<ul>
+<li><p>Book Notes</p>
+<ul>
+<li><strong>Vector</strong><a id="vector"> </a><pre><code class="lang-R">x &lt;- c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>) <span class="hljs-comment">#create a vector</span>
+</code></pre>
+<ul>
+<li><em>Modes of the elements in a vector</em>
+integer, numeric, character(string),logical(Boolean),complex<pre><code class="lang-R">typeof() <span class="hljs-comment">#check the mode of a variable x</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><em>Adding and deleting vector elements</em><pre><code class="lang-R">x &lt;- c(<span class="hljs-number">88</span>,<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)
+x &lt;- c(x[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>],<span class="hljs-number">168</span>,x[<span class="hljs-number">4</span>]) <span class="hljs-comment">#insert 168 before 13</span>
+x
+[<span class="hljs-number">1</span>] <span class="hljs-number">88</span> <span class="hljs-number">5</span> <span class="hljs-number">12</span> <span class="hljs-number">168</span> <span class="hljs-number">13</span>
+</code></pre>
+</li>
+<li><em>obtaining the length of a vector</em><pre><code class="lang-R">length (x)
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span>
+</code></pre>
+<pre><code>first1 &lt;- function(x){
+  for (i in 1:length(x)){
+      if (x[i]==1) break # break out of loop
+  }
+  return(i)
+} # application of length to determine the index of
+the first 1 value in x
+</code></pre><ul>
+<li>Be careful coding that length(x) = 0<pre><code class="lang-R">x &lt;- c()
+x
+<span class="hljs-literal">NULL</span>
+length(x)
+[<span class="hljs-number">1</span>] <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>: length(x)
+[<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">0</span>
+<span class="hljs-number">1</span>: -<span class="hljs-number">5</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">0</span> -<span class="hljs-number">1</span> -<span class="hljs-number">2</span> -<span class="hljs-number">3</span> -<span class="hljs-number">4</span> -<span class="hljs-number">5</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><em>A safety alternative of obtaining the length of a
+vector is to use the more advanced R function seq()</em><pre><code class="lang-R">x&lt;-c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)
+seq(x)
+[<span class="hljs-number">1</span>] <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>
+x&lt;-<span class="hljs-literal">NULL</span>
+seq(x)
+integer(<span class="hljs-number">0</span>)
+</code></pre>
+</li>
+<li><em>Declarations of vector</em><pre><code class="lang-R">y &lt;- vector (length=<span class="hljs-number">2</span>) <span class="hljs-comment"># must create y first</span>
+y[<span class="hljs-number">1</span>]&lt;-<span class="hljs-number">5</span>
+y[<span class="hljs-number">2</span>]&lt;-<span class="hljs-number">12</span>
+y&lt;-c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>) <span class="hljs-comment"># an alternative way</span>
+</code></pre>
+</li>
+<li><em>Recycles</em><ul>
+<li>R automatically recycles the shorter one, until it
+is long enough to match the longer one</li>
+</ul>
+</li>
+<li><p><em>Common vector operations</em></p>
+<ul>
+<li>&quot;+&quot; &quot;-&quot; &quot;/&quot; &quot;%%&quot; done element by element</li>
+<li>Negative subscripts mean that  we want to exclude
+the given elements in our output<pre><code class="lang-R">z&lt;-c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)
+z[-<span class="hljs-number">1</span>]  <span class="hljs-comment">#exclude element 1</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">12</span> <span class="hljs-number">13</span>
+z[-<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>] <span class="hljs-comment"># exclude elements 1 through 2</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">13</span>
+</code></pre>
+<pre><code class="lang-R">z&lt;-c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)
+z[<span class="hljs-number">1</span>:(length(z)-<span class="hljs-number">1</span>)] <span class="hljs-comment"># more general to use length function</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">12</span>
+z[-length(z)]
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">12</span>
+</code></pre>
+</li>
+<li>Generating useful vectors with the : operator<pre><code class="lang-R"><span class="hljs-number">5</span>:<span class="hljs-number">8</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span>
+<span class="hljs-number">5</span>:<span class="hljs-number">1</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>
+</code></pre>
+<pre><code class="lang-R">i&lt;-<span class="hljs-number">2</span>
+<span class="hljs-number">1</span>:i-<span class="hljs-number">1</span> <span class="hljs-comment">#this means (1:i)-1, not 1: (i-1)</span>
+[<span class="hljs-number">1</span>] <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+<span class="hljs-number">1</span>:(i-<span class="hljs-number">1</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-number">1</span>
+</code></pre>
+</li>
+<li>Generating vector sequences with seq()<pre><code class="lang-R">seq(from=<span class="hljs-number">12</span>,to=<span class="hljs-number">30</span>,by=<span class="hljs-number">3</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-number">12</span> <span class="hljs-number">15</span> <span class="hljs-number">18</span> <span class="hljs-number">21</span> <span class="hljs-number">24</span> <span class="hljs-number">27</span> <span class="hljs-number">30</span>
+</code></pre>
+</li>
+<li>Repeating vector constants with rep()
+rep(x,times)<pre><code class="lang-R">x&lt;-rep(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>)
+x
+[<span class="hljs-number">1</span>] <span class="hljs-number">8</span> <span class="hljs-number">8</span> <span class="hljs-number">8</span> <span class="hljs-number">8</span>
+rep(c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>),<span class="hljs-number">3</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">5</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">5</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span>
+</code></pre>
+<pre><code class="lang-R">rep(c(<span class="hljs-number">5</span>,<span class="hljs-number">12</span>,<span class="hljs-number">13</span>),each=<span class="hljs-number">2</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-number">5</span> <span class="hljs-number">5</span> <span class="hljs-number">12</span> <span class="hljs-number">12</span> <span class="hljs-number">13</span> <span class="hljs-number">13</span>
+</code></pre>
+</li>
+<li>All() and any() functions to report whether any or
+all of their arguments are true<pre><code class="lang-R">x&lt;-<span class="hljs-number">1</span>:<span class="hljs-number">10</span>
+any(x&gt;<span class="hljs-number">8</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-literal">TRUE</span>
+any(x&gt;<span class="hljs-number">88</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-literal">FALSE</span>
+all(x&gt;<span class="hljs-number">88</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-literal">FALSE</span>
+all(x&gt;<span class="hljs-number">0</span>)
+[<span class="hljs-number">1</span>] <span class="hljs-literal">TRUE</span>
+</code></pre>
+</li>
+<li>Finding runs of consecutive ones<pre><code class="lang-R">findruns &lt;- <span class="hljs-keyword">function</span>(x,k){
+  n&lt;-length(x)
+  runs&lt;-<span class="hljs-literal">NULL</span>
+  <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:(n-k+<span class="hljs-number">1</span>)){
+      <span class="hljs-keyword">if</span> (all(x[i:(i+k-<span class="hljs-number">1</span>)]==<span class="hljs-number">1</span>)) runs&lt;-c(runs,i)
+  }
+  <span class="hljs-keyword">return</span>(runs)
+}
+</code></pre>
+Alternative time saving way
+```R
+fundruns1 &lt;- function(x,k){
+n&lt;-length(x)
+runs&lt;- vector(length=n)
+count&lt;-0
+for (i in 1:(n-k+1)){
+  if (all(x[i:(i+k-1)]==1)){<pre><code>  count&lt;-count+1
+  runs[count]&lt;-i
+</code></pre>  }</li>
+</ul>
+<p>}
+if (count&gt;0){</p>
+<pre><code>runs&lt;-runs[1:count] # remove the unused portion of the vector
+</code></pre><p>} else runs &lt;- NULL
+return(runs)
+}</p>
+<pre><code>* predicting discrete-valued time series
+```R
+preda&lt;-function(x,k){
+    n&lt;-length(x)
+    k2&lt;-k/2
+    #the vector pred will contain our predicted values
+    pred&lt;-vector(length=n-k)
+    for (i in 1:(n-k)){
+        if (sum(x[i:(i+(k-1))])&gt;=k2) pred[i]&lt;-1 else pred[i]&lt;-0
+    }
+    return(mean(abs(pred-x[(k+1):n])))
+}
+</code></pre><pre><code>predb&lt;-function(x,k){
+    n&lt;-length(x)
+    k2&lt;-k/2
+    pred&lt;-vector(length(n-k))
+    sm&lt;-sum(x[1:k])
+    if (sm&gt;=k2) pred[1]&lt;-1 else pred[1]&lt;-0
+    if(n-k&gt;=2){
+        for (i in 2:(n-k)){
+            sm&lt;-sm+x[i+k-1]-x[i-1]
+            if (sm&gt;=k2) pred[i]&lt;-1 else pred[i]&lt;-0
+      }
+    }
+    return(mean(abs(pred-x[(k+1):n])))
+}
+</code></pre><ul>
+<li><strong>Plot</strong></li>
+<li>Histogram
+<img src="histo.png" alt=""></li>
+</ul>
+</li>
+<li><p><strong>Matrix</strong><a id="Matrix"> </a></p>
+</li>
+<li><strong>List</strong></li>
+<li><strong>Dataframe</strong><a id="Dataframe"></a></li>
+<li><strong>Function</strong></li>
+</ul>
+</li>
+<li><p>Sources</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/?dv=win" target="_blank">visualstudio</a></li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Programming-Python/Pandas.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Programming - Python">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Programming - R","level":"1.4","depth":1,"previous":{"title":"Programming - Python","level":"1.3","depth":1,"path":"Programming-Python/Pandas.md","ref":"Programming-Python/Pandas.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-R/README-DM.md","mtime":"2017-02-23T15:59:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-04T16:27:51.632Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
