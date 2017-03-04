@@ -21,7 +21,7 @@
   - An identifier must begin with a character, dollar sign, or underscore (Unicode letter since 1.5)
   - Case-sensitive, can't be a JS key word
   - Browser Object Model (BOM), such as *document* and *window*, *reserved words in browers*:
-    **alert** **eval** **location** **open** **array** **focus** **math** **outerHeight** **blur** **name** **parent** **history** **navigator** **parseFloat** **date** **image** **number** **regExp** **document** **isNaN** **object** **status** **escape** **length** **onLoad** **string**
+    _**alert** **eval** **location** **open** **array** **focus** **math** **outerHeight** **blur** **name** **parent** **history** **navigator** **parseFloat** **date** **image** **number** **regExp** **document** **isNaN** **object** **status** **escape** **length** **onLoad** **string**_
   - CamelCase notation: lowercase for the fist letter and the capatial letter for the following words
   - Underscore is used to signal a variable that's an objet's private data member `var _break = someval;`
   - Primitive Types: just three:  `string`, `numeric`, `boolean`
@@ -129,7 +129,11 @@
       var boolflag = new Boolean(false);
       var boolflag = new Boolean(""); // set to false for empty String
       var boolfag = new Boolean("false"); // set to true
-      ```
+      ```  
+      - ## _String object methods_   
+        ![String methods](assets\img\2017-03-04-15-00-35.png)
+       
+
 
 
 
