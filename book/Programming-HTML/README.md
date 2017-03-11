@@ -1,7 +1,7 @@
 ## Knowledge base for HTML
 * Source: [https://www.w3schools.com/html/](https://www.w3schools.com/html/html_elements.asp)
 * Notes:
-  - `<b>` is an empty emelmetns without a closing tag which defined a line break or can be cloased like this: `<\b>`
+  - `<b>` is an empty emelmetns without a closing tag which defined a line break or can be closed like this: `<\b>`
   - tages are not case sensitive, `<P>` means the same as `<p>`
   - All HTML elements can have `attributes` which provide additonal information about an element
   - Attributes are always specified in the `start tag`

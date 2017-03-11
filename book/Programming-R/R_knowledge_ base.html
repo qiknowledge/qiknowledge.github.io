@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Programming - Python · GitBook</title>
+        <title>Method - Statistics · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Programming-R/README-3-10-17.html" />
     
-    
-    <link rel="prev" href="../Programming-Javascript/" />
+    <link rel="prev" href="../Programming-Java/Exercise.html" />
     
 
     </head>
@@ -128,9 +126,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="Pandas.html">
+        <li class="chapter " data-level="1.4" data-path="../Programming-Python/Pandas.html">
             
-                <a href="Pandas.html">
+                <a href="../Programming-Python/Pandas.html">
             
                     
                     Programming - Python
@@ -141,9 +139,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Programming-R/README-3-10-17.html">
+        <li class="chapter " data-level="1.5" data-path="README-3-10-17.html">
             
-                <a href="../Programming-R/README-3-10-17.html">
+                <a href="README-3-10-17.html">
             
                     
                     Programming - R
@@ -186,9 +184,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../Programming-R/R_knowledge_ base.html">
+        <li class="chapter active" data-level="1.7" data-path="R_knowledge_ base.html">
             
-                <a href="../Programming-R/R_knowledge_ base.html">
+                <a href="R_knowledge_ base.html">
             
                     
                     Method - Statistics
@@ -229,7 +227,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Programming - Python</a>
+        <a href=".." >Method - Statistics</a>
     </h1>
 </div>
 
@@ -244,28 +242,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="knowledge-base-for-pandas-library">Knowledge base for Pandas library</h2>
+                                <h2 id="common-used-function-and-commands-in-r">Common used function and commands in R</h2>
 <ul>
-<li>Concatenate dataframe<pre><code class="lang-python"> <span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
- <span class="hljs-comment"># df and df2 are the dataframe</span>
- df.append(df2, ignore_index = <span class="hljs-keyword">True</span>) <span class="hljs-comment"># the indexes must be disjoint but the column do not need to be</span>
- frames =[df1, df2, df3]
- result = pd.concat(frames) <span class="hljs-comment"># df1, df2, df3 have the same column names</span>
- result.ix[<span class="hljs-string">&apos;y&apos;</span>] <span class="hljs-comment"># get the second block of the dataframe</span>
-</code></pre>
+<li><h2 id="survival-analysis">Survival Analysis</h2>
+<ul>
+<li>let $f(t)$ be the probability density function (p.d.f) of event time <em>T</em>. Then $F(t)$ represents $S(t) = Pr(T&gt;t) = 1-Pr(T \leq t) = 1 -\int_o^tf(u)du$<img src="assets/2017-03-09-18-07-20.png" alt="">
+<img src="assets/2017-03-09-18-06-13.png" alt="">
+<img src="assets/2017-03-09-18-08-13.png" alt="">
+<img src="assets/2017-03-09-18-09-27.png" alt="">
+<img src="assets/2017-03-09-18-11-07.png" alt="">
+<img src="assets/2017-03-09-18-14-36.png" alt=""></li>
+<li>The <code>hazard rate</code> is referred to as the force of mortality, the intensity rate, or the instantaneous risk. By Equation (1.6) , the hazard rate is mathematically defined as the derivative of the log survival probability at time t multiplied by &#x2212; 1. As a survival function is monotonically decreasing, the hazard function is nonnegative but not necessarily smaller than or equal to one. Therefore, as the standardized p.d.f., the hazard rate is a conditional probability rate. It is essential for the reader to comprehend the concept and the underlying properties of the hazard function because most survival models described in later chapters are created on the hazard rate.
+<img src="assets/2017-03-09-18-21-36.png" alt="">
+<img src="assets/2017-03-09-18-22-04.png" alt=""></li>
+</ul>
 </li>
-<li>Create dataframe<pre><code class="lang-python"><span class="hljs-comment"># from dictionary</span>
-d = {<span class="hljs-string">&apos;one&apos;</span>: [<span class="hljs-number">1.</span>,<span class="hljs-number">2.</span>,<span class="hljs-number">3.</span>, <span class="hljs-number">4.</span>],
-     <span class="hljs-string">&apos;two&apos;</span>: [<span class="hljs-number">4.</span>,<span class="hljs-number">3.</span>,<span class="hljs-number">2.</span>,<span class="hljs-number">1.</span>]}
-pd.DataFrame(d)
-</code></pre>
-</li>
-<li>Iterate through the row<pre><code class="lang-python"><span class="hljs-keyword">for</span> index, row <span class="hljs-keyword">in</span> df.iterrows(): <span class="hljs-comment">#slow, has to convert row to series</span>
-<span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> df.itertuples():
-<span class="hljs-comment">#fast, Iterate over the rows of DataFrame as tuples, with index value as first element of the tuple.</span>
-</code></pre>
-</li>
-<li>Merage two columns</li>
+</ul>
+<ul>
+<li>There are three main types of censoring: <code>right, left, and interval</code>. Censoring could occur, for example, when administering a survey to mothers every other month asking if they are still breast feeding. Right censoring occurs when mothers are still breast feeding after the last survey, since we do not know exactly how long they will continue. Left censoring occurs when mothers enter the study after they have stopped breast feeding. We do not know exactly when they stopped breast feeding, although we know that it happened before their entry to the study. Interval censoring occurs if the breast feeding ended between two successive surveys since one can only say that breast feeding ended somewhere within the past two months. </li>
+<li>Simple approaches researchers might choose to deal with censored data are to set the censored observations to missing or replace the unobserved value of the variable by zero, the minimum, maximum, mean value, or a randomly assigned value from the range of possible values. When the censoring is minimal, using one of these approaches can be reasonable. When it is not, these simple solutions can, however, cause serious bias in estimates and standard errors obtained in subsequent statistical analysis, can discard potent</li>
+<li><div style="background-color:red">The logistic regression, for example, can be applied to estimate the probability of experiencing a particular lifetime event within a limited time period; nevertheless, it does not consider the time when the event occurs and therefore disregards the length of the survival process. Suppose that two population groups have the same rate of experiencing a particular event by the end of an observation period but members in one group are expected to experience the event significantly later than do those in the other. The former population group has an advantaged survival pattern because its average life is extended. Obviously,the logistic regression ignores this timing factor, therefore not providing precise information.</div></li>
+<li><h3 id="kaplan-meier-survival-estimates">Kaplan-Meier survival estimates</h3>
+<img src="assets/2017-03-09-16-55-11.png" alt=""></li>
 </ul>
 
                                 
@@ -294,14 +292,10 @@ pd.DataFrame(d)
 
             
                 
-                <a href="../Programming-Javascript/" class="navigation navigation-prev " aria-label="Previous page: Programming - Javascript">
+                <a href="../Programming-Java/Exercise.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Exercise">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../Programming-R/README-3-10-17.html" class="navigation navigation-next " aria-label="Next page: Programming - R">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -310,7 +304,7 @@ pd.DataFrame(d)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming - Python","level":"1.4","depth":1,"next":{"title":"Programming - R","level":"1.5","depth":1,"path":"Programming-R/README-3-10-17.md","ref":"Programming-R/README-3-10-17.md","articles":[]},"previous":{"title":"Programming - Javascript","level":"1.3","depth":1,"path":"Programming-Javascript/README.md","ref":"Programming-Javascript/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-Python/Pandas.md","mtime":"2017-02-28T15:47:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-11T05:00:19.786Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Method - Statistics","level":"1.7","depth":1,"previous":{"title":"Exercise","level":"1.6.1","depth":2,"path":"Programming-Java/Exercise.md","ref":"Programming-Java/Exercise.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-R/R_knowledge_ base.md","mtime":"2017-03-10T21:38:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-11T05:00:19.786Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
