@@ -152,6 +152,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Programming-R/R_functions.html">
+            
+                <a href="../Programming-R/R_functions.html">
+            
+                    
+                    Useful R functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.6" data-path="../Programming-Java/">
@@ -192,6 +211,19 @@
             
                     
                     Method - Statistics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Method/ML-DM/DecisionTree.html">
+            
+                <a href="../Method/ML-DM/DecisionTree.html">
+            
+                    
+                    Method - Machine Learning / Data Mining
             
                 </a>
             
@@ -265,7 +297,61 @@ pd.DataFrame(d)
 <span class="hljs-comment">#fast, Iterate over the rows of DataFrame as tuples, with index value as first element of the tuple.</span>
 </code></pre>
 </li>
-<li>Merage two columns</li>
+<li><p>Concatenate data frame</p>
+<pre><code class="lang-python">   <span class="hljs-comment"># if df1, df2, df3 have the same column names, then</span>
+d = [df1, df2, df3]
+out = pd.concat(d, ignore_index = <span class="hljs-keyword">True</span>)
+out = df1.append(df2, ignore_index = <span class="hljs-keyword">True</span>) <span class="hljs-comment"># new df will have all columns from previous dataframe</span>
+<span class="hljs-comment"># Pandas series is like vector in R</span>
+s1 = pd.Series([<span class="hljs-string">&apos;x0&apos;</span>,<span class="hljs-string">&apos;x1&apos;</span>,<span class="hljs-string">&apos;x2&apos;</span>,<span class="hljs-string">&apos;x3&apos;</span>], name =<span class="hljs-string">&apos;X&apos;</span>)
+result = pd.concat([df1, s1], axis = <span class="hljs-number">1</span>, ignore_index = <span class="hljs-keyword">True</span>) <span class="hljs-comment"># it will add a new column(s1) to the df1, and ig=Ture will </span>
+                                                            <span class="hljs-comment"># drop all name references</span>
+pd.concat([s3,s4,s5], axis= <span class="hljs-number">1</span>, keys=[<span class="hljs-string">&apos;red&apos;</span>,<span class="hljs-string">&apos;blue&apos;</span>,<span class="hljs-string">&apos;yellow&apos;</span>]) <span class="hljs-comment"># s1, s2 and s2 are series    </span>
+
+<span class="hljs-comment"># concat a dictionary</span>
+pieces = {<span class="hljs-string">&apos;x&apos;</span>: df1, <span class="hljs-string">&apos;y&apos;</span>: df2,<span class="hljs-string">&apos;z&apos;</span>:df3}
+result = pd.concat(pieces) <span class="hljs-comment">#x, y, z will be used for key arguments</span>
+</code></pre>
+</li>
+<li><p>Joining/merging</p>
+<pre><code class="lang-python">  pd.merge(left, right, how=<span class="hljs-string">&apos;inner&apos;</span>, on = <span class="hljs-keyword">None</span>, left_on= <span class="hljs-keyword">None</span>, right_on = <span class="hljs-keyword">None</span>, left_index = <span class="hljs-keyword">False</span>, right_index = <span class="hljs-keyword">False</span>, 
+  sort=<span class="hljs-keyword">True</span>, suffixes=(<span class="hljs-string">&apos;_x&apos;</span>,<span class="hljs-string">&apos;_y&apos;</span>), copy = <span class="hljs-keyword">True</span>, indicator = <span class="hljs-keyword">False</span>)
+</code></pre>
+<ul>
+<li><code>on</code>: Columns to join on , must be found in both the left and right DataFrame objects. </li>
+<li><code>left_on</code>: Columns fom the left DataFrame to use as keys </li>
+<li><code>right_on</code>: Columns from the right DataFrame to use as keys</li>
+<li><code>left_index</code>: </li>
+<li><code>how</code>: <code>left, right, outer, inner</code></li>
+</ul>
+</li>
+<li><p>Convert data into same type, <code>series contains data, index, dtype and name</code></p>
+<pre><code class="lang-python">  <span class="hljs-comment">#return types for dataframe</span>
+  df.dtypes
+  <span class="hljs-comment"># A basic element of pandas dataframe is called series</span>
+  <span class="hljs-comment"># series contains data, index, dtype and name</span>
+  pd.DataFrame( {<span class="hljs-string">&apos;name&apos;</span>: pd.series, <span class="hljs-string">&apos;name2&apos;</span>: pd.series} )
+  <span class="hljs-keyword">del</span> df[<span class="hljs-string">&apos;two&apos;</span>]
+  df2 = df.pop(<span class="hljs-string">&apos;three&apos;</span>) <span class="hljs-comment"># remove &apos;three&apos; column</span>
+
+  pd.to_numeric(s, errors=<span class="hljs-string">&apos;coerce&apos;</span>)
+  <span class="hljs-number">0</span>     <span class="hljs-number">1.0</span>
+  <span class="hljs-number">1</span>     <span class="hljs-number">2.0</span>
+  <span class="hljs-number">2</span>     <span class="hljs-number">4.7</span>
+  <span class="hljs-number">3</span>     NaN
+  <span class="hljs-number">4</span>    <span class="hljs-number">10.0</span>
+  dtype: float64
+
+  pd.to_numeric(s, errors=<span class="hljs-string">&apos;ignore&apos;</span>)
+  <span class="hljs-comment"># the original Series is returned untouched</span>
+
+  df[[<span class="hljs-string">&apos;col2&apos;</span>,<span class="hljs-string">&apos;col3&apos;</span>]] = df[[<span class="hljs-string">&apos;col2&apos;</span>,<span class="hljs-string">&apos;col3&apos;</span>]].apply(pd.to_numeric) <span class="hljs-comment"># apply to two columns</span>
+
+  df.apply(<span class="hljs-keyword">lambda</span> x: pd.to_numeric(x, errors=<span class="hljs-string">&apos;ignore&apos;</span>)) <span class="hljs-comment"># apply to all columns</span>
+
+  df[[<span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>]] = df[[<span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;three&apos;</span>]].astype(float)
+</code></pre>
+</li>
 </ul>
 
                                 
@@ -310,7 +396,7 @@ pd.DataFrame(d)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming - Python","level":"1.4","depth":1,"next":{"title":"Programming - R","level":"1.5","depth":1,"path":"Programming-R/README-3-10-17.md","ref":"Programming-R/README-3-10-17.md","articles":[]},"previous":{"title":"Programming - Javascript","level":"1.3","depth":1,"path":"Programming-Javascript/README.md","ref":"Programming-Javascript/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-Python/Pandas.md","mtime":"2017-02-28T15:47:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-11T05:00:19.786Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Programming - Python","level":"1.4","depth":1,"next":{"title":"Programming - R","level":"1.5","depth":1,"path":"Programming-R/README-3-10-17.md","ref":"Programming-R/README-3-10-17.md","articles":[{"title":"Useful R functions","level":"1.5.1","depth":2,"path":"Programming-R/R_functions.md","ref":"Programming-R/R_functions.md","articles":[]}]},"previous":{"title":"Programming - Javascript","level":"1.3","depth":1,"path":"Programming-Javascript/README.md","ref":"Programming-Javascript/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-Python/Pandas.md","mtime":"2017-03-17T04:37:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-17T04:38:18.478Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

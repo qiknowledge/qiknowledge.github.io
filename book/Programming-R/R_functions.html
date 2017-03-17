@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Programming - Java · GitBook</title>
+        <title>Useful R functions · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Exercise.html" />
+    <link rel="next" href="../Programming-Java/" />
     
     
-    <link rel="prev" href="../Programming-R/R_functions.html" />
+    <link rel="prev" href="README-3-10-17.html" />
     
 
     </head>
@@ -141,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Programming-R/README-3-10-17.html">
+        <li class="chapter " data-level="1.5" data-path="README-3-10-17.html">
             
-                <a href="../Programming-R/README-3-10-17.html">
+                <a href="README-3-10-17.html">
             
                     
                     Programming - R
@@ -155,9 +155,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Programming-R/R_functions.html">
+        <li class="chapter active" data-level="1.5.1" data-path="R_functions.html">
             
-                <a href="../Programming-R/R_functions.html">
+                <a href="R_functions.html">
             
                     
                     Useful R functions
@@ -173,9 +173,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../Programming-Java/">
             
-                <a href="./">
+                <a href="../Programming-Java/">
             
                     
                     Programming - Java
@@ -187,9 +187,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="Exercise.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Programming-Java/Exercise.html">
             
-                <a href="Exercise.html">
+                <a href="../Programming-Java/Exercise.html">
             
                     
                     Exercise
@@ -205,9 +205,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../Programming-R/R_knowledge_ base.html">
+        <li class="chapter " data-level="1.7" data-path="R_knowledge_ base.html">
             
-                <a href="../Programming-R/R_knowledge_ base.html">
+                <a href="R_knowledge_ base.html">
             
                     
                     Method - Statistics
@@ -261,7 +261,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Programming - Java</a>
+        <a href=".." >Useful R functions</a>
     </h1>
 </div>
 
@@ -276,67 +276,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="knowledge-base-for-java-programming-language">Knowledge Base for Java Programming Language</h2>
+                                <h2 id="useful-functions-in-r">Useful functions in R</h2>
 <ul>
-<li>Book<ul>
-<li>Thinking in Java 4th ed (Bruce Eckel)</li>
-<li><a href="https://www.google.com" target="_blank">I&apos;m an inline-style link</a></li>
+<li>Convert to Date</li>
 </ul>
-</li>
-<li><p>Book Notes</p>
+<pre><code class="lang-R">as.Date(dateData, format = <span class="hljs-string">&quot;&quot;</span>)
+</code></pre>
+<p><img src="assets/2017-03-16-19-11-21.png" alt="Date attributes"></p>
 <ul>
-<li>Coding style: <code>camel-casing</code></li>
-<li><strong>if-else</strong> operator: <code>boolean-exp ? vale0 : value1</code></li>
-<li>Casting: Allows to cast any primitive type to any other primitive type,
-except <strong>boolean</strong>. Class types do not allow casting. Promotion.</li>
-<li><em>A compendium of operators</em>: Book page 84-90.</li>
-<li><strong>if-else</strong><pre><code class="lang-java">    <span class="hljs-keyword">if</span> (testval &gt; target)
-       result = +<span class="hljs-number">1</span>;
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (testval &lt;target)
-       result = -<span class="hljs-number">1</span>;
-    <span class="hljs-keyword">else</span>
-       result = <span class="hljs-number">0</span>; <span class="hljs-comment">// Match</span>
-</code></pre>
-</li>
-<li><p><strong>Iteration</strong></p>
-<pre><code class="lang-java">  <span class="hljs-keyword">while</span>(<span class="hljs-keyword">boolean</span>-exp)
-    <span class="hljs-function">statement
-
-  do
-     statement
-  <span class="hljs-title">while</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span>-exp)</span>
-
-  <span class="hljs-title">for</span> <span class="hljs-params">(initialization; <span class="hljs-keyword">boolean</span>-exp; step)</span>
-    statement
-  <span class="hljs-title">for</span> <span class="hljs-params">(<span class="hljs-keyword">char</span> c = <span class="hljs-number">0</span>; c &lt; <span class="hljs-number">128</span>; c++)</span> </span>{}
-  <span class="hljs-comment">//Using the comma operator, you can define multiple variables within a for</span>
-  <span class="hljs-comment">//statement, but they must be of the same type</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>, j=i+<span class="hljs-number">10</span>; i&lt; <span class="hljs-number">5</span>; i++, j=i*<span class="hljs-number">2</span>) {}
-    <span class="hljs-comment">/* output:
-    i = 1 j= 11
-    i = 2 j = 4
-    i = 3 j = 6
-    i = 4 j = 8
-    */</span>
-  <span class="hljs-comment">// Java SE5 introduces new for syntax, for use with arrays and containers.</span>
-  <span class="hljs-comment">// This is often called the foreach syntax</span>
-  <span class="hljs-keyword">float</span> f[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">10</span>];
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">10</span> ; i ++)
-     f[i] = rand.nextFloat();
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">float</span> x : f) {}
-  <span class="hljs-keyword">switch</span>(integral-selector){ <span class="hljs-comment">// requires to evaluate int or char, but can use enum</span>
-    <span class="hljs-keyword">case</span> integral-value1 : statement;  <span class="hljs-comment">// break is optional</span>
-    <span class="hljs-keyword">case</span> integral-value2 : statement; <span class="hljs-keyword">break</span>;
-    <span class="hljs-keyword">default</span>: statement;
-  }
-</code></pre>
-</li>
-<li>Method Overloading Page 120</li>
-<li>Polymorphism
--</li>
+<li>Filter data in dataframe</li>
 </ul>
-</li>
-</ul>
+<pre><code class="lang-R">my.data.frame = subset(data, V1 &gt;<span class="hljs-number">2</span> | V2 &lt; <span class="hljs-number">4</span>)
+new.data = data[which(data$v1 &gt; <span class="hljs-number">2</span> | data$v2 &lt;<span class="hljs-number">4</span>), ] <span class="hljs-comment"># which does prevent NA values from throuwing back unwanted results</span>
+</code></pre>
 
                                 
                                 </section>
@@ -364,12 +316,12 @@ except <strong>boolean</strong>. Class types do not allow casting. Promotion.</l
 
             
                 
-                <a href="../Programming-R/R_functions.html" class="navigation navigation-prev " aria-label="Previous page: Useful R functions">
+                <a href="README-3-10-17.html" class="navigation navigation-prev " aria-label="Previous page: Programming - R">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Exercise.html" class="navigation navigation-next " aria-label="Next page: Exercise">
+                <a href="../Programming-Java/" class="navigation navigation-next " aria-label="Next page: Programming - Java">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -380,7 +332,7 @@ except <strong>boolean</strong>. Class types do not allow casting. Promotion.</l
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming - Java","level":"1.6","depth":1,"next":{"title":"Exercise","level":"1.6.1","depth":2,"path":"Programming-Java/Exercise.md","ref":"Programming-Java/Exercise.md","articles":[]},"previous":{"title":"Useful R functions","level":"1.5.1","depth":2,"path":"Programming-R/R_functions.md","ref":"Programming-R/R_functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-Java/README.md","mtime":"2017-02-16T15:29:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-17T04:38:18.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Useful R functions","level":"1.5.1","depth":2,"next":{"title":"Programming - Java","level":"1.6","depth":1,"path":"Programming-Java/README.md","ref":"Programming-Java/README.md","articles":[{"title":"Exercise","level":"1.6.1","depth":2,"path":"Programming-Java/Exercise.md","ref":"Programming-Java/Exercise.md","articles":[]}]},"previous":{"title":"Programming - R","level":"1.5","depth":1,"path":"Programming-R/README-3-10-17.md","ref":"Programming-R/README-3-10-17.md","articles":[{"title":"Useful R functions","level":"1.5.1","depth":2,"path":"Programming-R/R_functions.md","ref":"Programming-R/R_functions.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Programming-R/R_functions.md","mtime":"2017-03-17T00:47:49.913Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-17T04:38:18.478Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
